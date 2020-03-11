@@ -5,7 +5,7 @@ import Logo from "./burgermenu.png";
 function Header() {
   return (
     <header className="header">
-      <img src={Logo} className="Logo" alt="Logo" />
+      <img src={Logo} className="logo" alt="Logo" />
       <h1 className="title">My Survey</h1>
     </header>
   );
