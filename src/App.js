@@ -14,7 +14,7 @@ function App() {
         <main>
           <div>
             <Switch>
-              <Route path="/">
+              <Route exact path="/">
                 <Add />
               </Route>
               <Route path="/vote">
