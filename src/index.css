@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
 body {
-  margin: 0;
-  height: 800px;
+  margin: 5px;
+  height: 100vh;
   background-image: url("./background@2x.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
