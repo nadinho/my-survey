@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Container from "../components/container";
 
 function Add() {
   return (
-    <div>
-      <p>Add</p>
+    <Container>
+      <p>Create your own poll</p>
       <Link to="/vote">Vote</Link>
-    </div>
+    </Container>
   );
 }
 

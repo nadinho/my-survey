@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Container from "../components/container";
 
 function Result() {
   return (
-    <div>
+    <Container>
       <p>Result</p>
       <Link to="/">Add</Link>
-    </div>
+    </Container>
   );
 }
 
