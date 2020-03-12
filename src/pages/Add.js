@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
-import VoteButton from "../components/VoteButton";
+// import VoteButton from "../components/VoteButton";
 import AskQuestion from "../components/QuestionInput";
+import Button from "../components/Button";
 
 function Add() {
   return (
@@ -13,9 +14,10 @@ function Add() {
       <input class="input" placeholder="Answer 1"></input>
       <input class="input" placeholder="Answer 2"></input>
       <input class="input" placeholder="Answer 3"></input>
-      <Link to="/vote">
+      <Button>Vote</Button>
+      {/* <Link to="/vote">
         <VoteButton to="/vote" onClick={VoteButton}></VoteButton>
-      </Link>
+      </Link> */}
     </Container>
   );
 }
