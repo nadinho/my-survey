@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Container from "../components/Container";
-import VoteButton from "../components/VoteButton";
-import AskQuestion from "../components/QuestionInput";
+// import VoteButton from "../components/VoteButton";
+// import AskQuestion from "../components/QuestionInput";
+import Button from "../components/Button";
+import "./Add.css";
 
 function Add() {
   const [question, setQuestion] = React.useState("");
@@ -36,6 +38,7 @@ function Add() {
         <p>Create your own poll</p>
 
         <input
+          type="text"
           value={question}
           onChange={event => {
             setQuestion(event.target.value);
@@ -97,8 +100,9 @@ function Add() {
         <Button>Vote</Button>
         {/* <Link to="/vote">
         <VoteButton to="/vote" onClick={VoteButton}></VoteButton>
-      </Link>
-    </Container>
+      </Link> */}
+      </Container>
+    </form>
   );
 }
 
