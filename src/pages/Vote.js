@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Container from "../components/container";
+import ResultButton from "../components/ResultButton";
 
 function Vote() {
   return (
     <Container>
       <p>Vote</p>
-      <Link to="/result">Result</Link>
+      <Link to="/result">
+        {" "}
+        <ResultButton to="/add" onClick={ResultButton}></ResultButton>
+      </Link>
     </Container>
   );
 }
