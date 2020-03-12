@@ -1,0 +1,30 @@
+.fas {
+  color: #c4aaff;
+  margin: 5px;
+  font-size: 1.3rem;
+}
+
+.far {
+  color: #c4aaff;
+  margin: 5px;
+  font-size: 1.3rem;
+}
+
+.answerOne {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+.answerTwo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+.answerThree {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
