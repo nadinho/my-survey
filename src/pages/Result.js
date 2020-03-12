@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Container from "../components/container";
+import CreateButton from "../components/CreateButton";
 
 function Result() {
   return (
-    <div>
+    <Container>
       <p>Result</p>
-      <Link to="/">Add</Link>
-    </div>
+      <Link to="/">
+        <CreateButton to="/add" onClick={CreateButton}></CreateButton>
+      </Link>
+    </Container>
   );
 }
 
