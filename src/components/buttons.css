@@ -7,5 +7,10 @@
   border-radius: 30px;
   box-shadow: 0px 3px 6px #ddd;
   font-size: 0.8rem;
+  cursor: pointer;
   color: white;
+}
+
+.btn:hover {
+  background-color: #aa8bf3;
 }
