@@ -6,7 +6,7 @@ import Container from "../components/Container";
 
 const POLLS_API_URL =
   process.env.REACT_APP_POLLS_API ||
-  "https://my-json-server.typicode.com/nadinho/my-server";
+  "https://my-json-server.typicode.com/nadinho/my-survey";
 
 function Result() {
   const { pollId } = useParams();
