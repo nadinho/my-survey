@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Container from "../components/container";
+import Container from "../components/Container";
 import VoteButton from "../components/VoteButton";
-import AskQuestion from "../components/input";
+import AskQuestion from "../components/QuestionInput";
 
 function Add() {
   return (
