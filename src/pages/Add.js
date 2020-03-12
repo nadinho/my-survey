@@ -9,6 +9,10 @@ function Add() {
     <Container>
       <p>Create your own poll</p>
       <AskQuestion></AskQuestion>
+      <p>Your answers</p>
+      <input class="input" placeholder="Answer 1"></input>
+      <input class="input" placeholder="Answer 2"></input>
+      <input class="input" placeholder="Answer 3"></input>
       <Link to="/vote">
         <VoteButton to="/vote" onClick={VoteButton}></VoteButton>
       </Link>
