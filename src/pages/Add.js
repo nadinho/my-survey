@@ -12,18 +12,28 @@ function Add() {
   const [answerTwo, setAnswerTwo] = React.useState("");
   const [answerThree, setAnswerThree] = React.useState("");
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    alert(JSON.stringify(poll));
+
+    const poll = {
+      question: question,
+      answerOne: answerOne,
+      answerTwo: answerTwo,
+      answerThree: answerThree
+    };
+    const response = await fetch("http://localhost:4000/polls", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8"
+      },
+      body: JSON.stringify(poll)
+    });
+    const createdPoll = await response.json();
+    alert(`Created new Poll with ${createdPoll.id}`);
   }
-  const poll = {
-    question: question,
-    answerOne: answerOne,
-    answerTwo: answerTwo,
-    answerThree: answerThree
-  };
+
   return (
-    <form class="form" onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <Container>
         <p>Create your own poll</p>
 
@@ -33,7 +43,7 @@ function Add() {
           onChange={event => {
             setQuestion(event.target.value);
           }}
-          class="input"
+          className="input"
           placeholder="Ask your question"
         ></input>
 
@@ -41,7 +51,7 @@ function Add() {
 
         <div className="answerOne">
           <input
-            class="input"
+            className="input"
             placeholder="Answer 1"
             value={answerOne}
             onChange={event => {
@@ -49,15 +59,15 @@ function Add() {
             }}
           ></input>
           <label className="icons">
-            <i class="fas fa-plus-square"></i>
+            <i className="fas fa-plus-square"></i>
 
-            <i class="far fa-minus-square"></i>
+            <i className="far fa-minus-square"></i>
           </label>
         </div>
 
         <div className="answerTwo">
           <input
-            class="input"
+            className="input"
             placeholder="Answer 2"
             value={answerTwo}
             onChange={event => {
@@ -65,15 +75,15 @@ function Add() {
             }}
           ></input>
           <label className="icons">
-            <i class="fas fa-plus-square"></i>
+            <i className="fas fa-plus-square"></i>
 
-            <i class="far fa-minus-square"></i>
+            <i className="far fa-minus-square"></i>
           </label>
         </div>
 
         <div className="answerThree">
           <input
-            class="input"
+            className="input"
             placeholder="Answer 3"
             value={answerThree}
             onChange={event => {
@@ -81,9 +91,9 @@ function Add() {
             }}
           ></input>
           <label className="icons">
-            <i class="fas fa-plus-square"></i>
+            <i className="fas fa-plus-square"></i>
 
-            <i class="far fa-minus-square"></i>
+            <i className="far fa-minus-square"></i>
           </label>
         </div>
 
