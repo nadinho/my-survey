@@ -17,8 +17,8 @@ function Add() {
     question: question
   };
   return (
-    <form class="form" onSubmit={handleSubmit}>
-      <Container>
+      <form class="form" onSubmit={handleSubmit}>
+    <Container>
         <p>Create your own poll</p>
 
         <input
@@ -65,7 +65,8 @@ function Add() {
         <VoteButton to="/vote" onClick={VoteButton}></VoteButton>
       </Link> */}
       </Container>
-    </form>
+      </form>
+    
   );
 }
 
