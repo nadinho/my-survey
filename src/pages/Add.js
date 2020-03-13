@@ -47,7 +47,7 @@ function Add() {
           onChange={event => {
             setQuestion(event.target.value);
           }}
-          className="input"
+          className="questionInput"
           placeholder="Ask your question"
         ></input>
 
@@ -55,7 +55,7 @@ function Add() {
 
         <div className="answerOne">
           <input
-            className="input"
+            className="answerInput"
             placeholder="Answer 1"
             value={answerOne}
             onChange={event => {
@@ -71,7 +71,7 @@ function Add() {
 
         <div className="answerTwo">
           <input
-            className="input"
+            className="answerInput"
             placeholder="Answer 2"
             value={answerTwo}
             onChange={event => {
@@ -87,7 +87,7 @@ function Add() {
 
         <div className="answerThree">
           <input
-            className="input"
+            className="answerInput"
             placeholder="Answer 3"
             value={answerThree}
             onChange={event => {
