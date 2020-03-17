@@ -12,15 +12,16 @@ function Add() {
   const [answerTwo, setAnswerTwo] = React.useState("");
   const [answerThree, setAnswerThree] = React.useState("");
 
+  const poll = {
+    question: question,
+    answerOne: answerOne,
+    answerTwo: answerTwo,
+    answerThree: answerThree
+  };
+
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const poll = {
-      question: question,
-      answerOne: answerOne,
-      answerTwo: answerTwo,
-      answerThree: answerThree
-    };
     const response = await fetch(
       process.env.REACT_APP_POLLS_API ||
         "https://my-json-server.typicode.com/nadinho/my-survey/polls",
@@ -101,7 +102,7 @@ function Add() {
           </label>
         </div>
 
-        <Button>Vote</Button>
+        <Button type="submit">Vote</Button>
         {/* <Link to="/vote">
         <VoteButton to="/vote" onClick={VoteButton}></VoteButton>
       </Link> */}
