@@ -12,6 +12,13 @@ function Add() {
   const [answerTwo, setAnswerTwo] = React.useState("");
   const [answerThree, setAnswerThree] = React.useState("");
 
+  const poll = {
+    question: question,
+    answerOne: answerOne,
+    answerTwo: answerTwo,
+    answerThree: answerThree
+  };
+
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -102,7 +109,7 @@ function Add() {
           </label>
         </div>
 
-        <Button>Vote</Button>
+        <Button type="submit">Vote</Button>
         {/* <Link to="/vote">
         <VoteButton to="/vote" onClick={VoteButton}></VoteButton>
       </Link> */}
